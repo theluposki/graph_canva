@@ -35,4 +35,6 @@ html, body {
     background-color: #fff;
     min-width: var(--w);
     max-width: var(--w);
+    min-height: 200px;
+    max-height: 200px;
 }

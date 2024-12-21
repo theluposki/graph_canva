@@ -1,18 +1,18 @@
 import Barra from "./barra.js";
 
 const tela = document.getElementById("tela");
-tela.width = innerWidth;
-tela.height = 200;
-const meta = 40;
-const dados = [12, 14, 3, 38, 24, 22, 21, 14, 18, 20, 12, 4, 8];
-// 30 / 100 * 12
+// Detectar o pixel ratio do dispositivo
+const pixelRatio = window.devicePixelRatio || 1;
 
-console.log(dados.length);
+tela.width = innerWidth * pixelRatio;
+tela.height = 200 * pixelRatio;
+const meta = 30;
+const dados = [12, 14, 3, 28, 24, 22, 21, 14, 18, 20, 12, 4, 8];
+// 30 / 100 * 12
 
 const ctx = tela.getContext("2d");
 
 const barras = dados.map(() => new Barra(ctx, tela.width, tela.height));
-
 
 const cores = [
     "#FF5733", "#33FF57", "#3357FF", "#F3FF33", "#FF33F3",
