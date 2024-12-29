@@ -29,12 +29,22 @@ html, body {
     min-height: var(--h);
     max-height: var(--h);
     background-color: antiquewhite;
+
+    display: flex;
+    flex-direction: column;
 }
 
 #tela {
     background-color: #fff;
-    min-width: var(--w);
-    max-width: var(--w);
+    --m-tela: 10px;
+    min-width: calc(var(--w) - 2 * var(--m-tela));
+    max-width: calc(var(--w) - 2 * var(--m-tela));
     min-height: 200px;
     max-height: 200px;
+    margin: 0 var(--m-tela);
+}
+
+#range {
+    margin: 20px;
+    flex: 1;
 }
